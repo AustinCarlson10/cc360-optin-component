@@ -3,32 +3,304 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Course Creator 360 - Opt-in</title>
+	<title>ICON Fence - Fencing, Gates & Automation</title>
+	<meta name="description" content="Professional residential and commercial fencing. Vinyl, wood, aluminum, chain link, and automated gates. Request a free quote today.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-	<main class="hero">
-		<div class="hero__content">
-			<h1 class="hero__title">
-				<span>Slash your costs</span><span class="nowrap">and</span>
-				<br>
-				<span>scale your course</span>
-			</h1>
-			<p class="hero__subtitle">Stop drowning in the tech. Join Course Creator 360 and get the only solution you’ll ever need</p>
+<body class="theme-light">
+	<button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+		<svg class="theme-toggle__icon theme-toggle__icon--sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<circle cx="12" cy="12" r="5"></circle>
+			<line x1="12" y1="1" x2="12" y2="3"></line>
+			<line x1="12" y1="21" x2="12" y2="23"></line>
+			<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+			<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+			<line x1="1" y1="12" x2="3" y2="12"></line>
+			<line x1="21" y1="12" x2="23" y2="12"></line>
+			<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+			<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+		</svg>
+		<svg class="theme-toggle__icon theme-toggle__icon--moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+			<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+		</svg>
+	</button>
 
-			<section class="optin-card" aria-label="Email opt-in">
-				<form id="optinForm" novalidate>
-					<label class="sr-only" for="email">Email</label>
-					<input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
-					<button id="submitBtn" type="submit">Submit</button>
-					<p id="message" class="message" role="status" aria-live="polite"></p>
-				</form>
-			</section>
+	<header class="site-header" role="banner">
+		<div class="container header__inner">
+			<a href="#home" class="brand" aria-label="ICON Fence home">
+				<span class="brand__logo" aria-hidden="true">⛓️</span>
+				<span class="brand__text">ICON Fence</span>
+			</a>
+			<nav class="nav" aria-label="Primary">
+				<button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+					<span class="nav__bar"></span>
+					<span class="nav__bar"></span>
+					<span class="nav__bar"></span>
+				</button>
+				<ul id="primaryNav" class="nav__list">
+					<li><a href="#fencing">Fencing</a></li>
+					<li><a href="#gates">Gates & Automation</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#reviews">Reviews</a></li>
+					<li><a href="#areas">Service Areas</a></li>
+					<li><a href="#quote" class="btn btn--primary">Get a Quote</a></li>
+				</ul>
+			</nav>
+			<a class="header__phone" href="tel:+15555551234" aria-label="Call us">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.77.57 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.15a2 2 0 0 1 2.11-.45c.83.27 1.7.45 2.6.57A2 2 0 0 1 22 16.92z"/></svg>
+				<span>(555) 555-1234</span>
+			</a>
 		</div>
+	</header>
+
+	<main id="home">
+		<section class="hero hero--image">
+			<div class="container hero__content">
+				<h1 class="hero__title">
+					<span>Quality fencing built to last</span><br>
+					<span class="nowrap">For homes and businesses</span>
+				</h1>
+				<p class="hero__subtitle">Vinyl, wood, aluminum, chain link, and security fencing. Expert installation, stellar service, and industry-leading warranties.</p>
+				<div class="hero__ctas">
+					<a href="#quote" class="btn btn--primary btn--lg">Request a Free Quote</a>
+					<a href="tel:+15555551234" class="btn btn--ghost btn--lg">Call (555) 555-1234</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="fencing" class="section">
+			<div class="container">
+				<header class="section__header">
+					<h2>Fencing Options</h2>
+					<p>Premium materials for every style and budget.</p>
+				</header>
+				<div class="cards-grid">
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b0?q=80&w=1200&auto=format&fit=crop" alt="Vinyl privacy fence" loading="lazy">
+						<h3>Vinyl</h3>
+						<p>Low maintenance privacy and picket styles in classic colors.</p>
+					</article>
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop" alt="Wood fence" loading="lazy">
+						<h3>Wood</h3>
+						<p>Cedar and pressure-treated designs with custom trims and gates.</p>
+					</article>
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1592910268765-9f3e84a03358?q=80&w=1200&auto=format&fit=crop" alt="Aluminum fence" loading="lazy">
+						<h3>Aluminum</h3>
+						<p>Elegant, durable, and pool-code compliant styles and heights.</p>
+					</article>
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1657872185597-0237a747d195?q=80&w=1200&auto=format&fit=crop" alt="Chain link fence" loading="lazy">
+						<h3>Chain Link</h3>
+						<p>Galvanized or black vinyl-coated for residential and commercial.</p>
+					</article>
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1523419409543-a7e1e86ed651?q=80&w=1200&auto=format&fit=crop" alt="Security fence" loading="lazy">
+						<h3>Security</h3>
+						<p>Anti-climb, bollards, and commercial perimeter solutions.</p>
+					</article>
+					<article class="card">
+						<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Commercial fencing" loading="lazy">
+						<h3>Commercial</h3>
+						<p>Turnkey projects for properties, facilities, and new developments.</p>
+					</article>
+				</div>
+				<div class="section__cta">
+					<a href="#quote" class="btn btn--primary">Get pricing and options</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="gates" class="section section--alt">
+			<div class="container split">
+				<div class="split__media">
+					<img src="https://images.unsplash.com/photo-1620138546290-4fc52f4a1512?q=80&w=1200&auto=format&fit=crop" alt="Automatic driveway gate" loading="lazy">
+				</div>
+				<div class="split__content">
+					<h2>Gates & Automation</h2>
+					<p>We design and install swing, slide, and cantilever gates with professional-grade operators, keypads, safety devices, and smart controls.</p>
+					<ul class="checklist">
+						<li>Driveway and pedestrian gates</li>
+						<li>Access control and intercoms</li>
+						<li>Repairs and upgrades</li>
+					</ul>
+					<a href="#quote" class="btn btn--primary">Talk to a gate specialist</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<header class="section__header">
+					<h2>Why Choose ICON Fence</h2>
+					<p>Your project is handled by seasoned pros from estimate to final walkthrough.</p>
+				</header>
+				<div class="features">
+					<div class="feature">
+						<h3>Expert Installation</h3>
+						<p>Trained in best practices for structural integrity and longevity.</p>
+					</div>
+					<div class="feature">
+						<h3>Top Materials</h3>
+						<p>Trusted suppliers, strong warranties, and code-compliant products.</p>
+					</div>
+					<div class="feature">
+						<h3>Clear Communication</h3>
+						<p>Transparent quotes, clear timelines, and proactive updates.</p>
+					</div>
+					<div class="feature">
+						<h3>Fully Insured</h3>
+						<p>Licensed and insured for residential and commercial work.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery" class="section section--tight">
+			<div class="container">
+				<header class="section__header">
+					<h2>Project Gallery</h2>
+					<p>See recent installations and craftsmanship.</p>
+				</header>
+				<div class="gallery">
+					<img src="https://images.unsplash.com/photo-1585829365573-023ff8c6f9d7?q=80&w=1200&auto=format&fit=crop" alt="Fence project 1" loading="lazy">
+					<img src="https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop" alt="Fence project 2" loading="lazy">
+					<img src="https://images.unsplash.com/photo-1555448248-2571daf6344b?q=80&w=1200&auto=format&fit=crop" alt="Fence project 3" loading="lazy">
+					<img src="https://images.unsplash.com/photo-1523419409543-a7e1e86ed651?q=80&w=1200&auto=format&fit=crop" alt="Fence project 4" loading="lazy">
+					<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Fence project 5" loading="lazy">
+					<img src="https://images.unsplash.com/photo-1592910268765-9f3e84a03358?q=80&w=1200&auto=format&fit=crop" alt="Fence project 6" loading="lazy">
+				</div>
+			</div>
+		</section>
+
+		<section id="reviews" class="section section--alt">
+			<div class="container">
+				<header class="section__header">
+					<h2>What Our Customers Say</h2>
+					<p>Real feedback from homeowners and property managers.</p>
+				</header>
+				<div class="testimonials" aria-live="polite">
+					<figure class="testimonial is-active">
+						<blockquote>“The crew was professional and quick. Our vinyl fence looks amazing!”</blockquote>
+						<figcaption>— Jordan R.</figcaption>
+					</figure>
+					<figure class="testimonial">
+						<blockquote>“Great communication from start to finish. Fair price and superb quality.”</blockquote>
+						<figcaption>— Taylor M.</figcaption>
+					</figure>
+					<figure class="testimonial">
+						<blockquote>“They handled our commercial perimeter project flawlessly. Highly recommend.”</blockquote>
+						<figcaption>— Facility Manager</figcaption>
+					</figure>
+					<div class="testimonial__controls">
+						<button class="btn btn--ghost" id="prevTestimonial" aria-label="Previous testimonial">‹</button>
+						<button class="btn btn--ghost" id="nextTestimonial" aria-label="Next testimonial">›</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="areas" class="section">
+			<div class="container split">
+				<div class="split__content">
+					<h2>Service Areas</h2>
+					<p>Proudly serving the surrounding region.</p>
+					<ul class="areas">
+						<li>Springfield</li>
+						<li>Riverton</li>
+						<li>Oakwood</li>
+						<li>Brookfield</li>
+						<li>Laketown</li>
+						<li>And more…</li>
+					</ul>
+				</div>
+				<div class="split__media map-embed">
+					<iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531632!3d-37.81627974202182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAyLjYiUyAxNDTCsDU3JzE1LjQiRQ!5e0!3m2!1sen!2sus!4v1660000000000"></iframe>
+				</div>
+			</div>
+		</section>
+
+		<section id="quote" class="section section--highlight">
+			<div class="container">
+				<header class="section__header">
+					<h2>Request a Free Quote</h2>
+					<p>Tell us about your project and we’ll follow up quickly.</p>
+				</header>
+				<form id="quoteForm" class="form" novalidate>
+					<div class="form__row">
+						<label for="name">Full name</label>
+						<input id="name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required>
+					</div>
+					<div class="form__row">
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+					</div>
+					<div class="form__row">
+						<label for="phone">Phone</label>
+						<input id="phone" name="phone" type="tel" placeholder="(555) 555-1234" autocomplete="tel" required>
+					</div>
+					<div class="form__row">
+						<label for="address">Address</label>
+						<input id="address" name="address" type="text" placeholder="123 Main St, City, ST" autocomplete="street-address">
+					</div>
+					<div class="form__row">
+						<label for="type">Project type</label>
+						<select id="type" name="type" required>
+							<option value="" disabled selected>Select one…</option>
+							<option>Vinyl fencing</option>
+							<option>Wood fencing</option>
+							<option>Aluminum fencing</option>
+							<option>Chain link fencing</option>
+							<option>Security/commercial</option>
+							<option>Gate & automation</option>
+						</select>
+					</div>
+					<div class="form__row form__row--full">
+						<label for="details">Project details</label>
+						<textarea id="details" name="details" rows="4" placeholder="Fence length, style, timeline, and any other helpful info"></textarea>
+					</div>
+					<div class="form__actions">
+						<button id="submitQuote" type="submit" class="btn btn--primary">Submit Request</button>
+						<p id="quoteMessage" class="message" role="status" aria-live="polite"></p>
+					</div>
+				</form>
+			</div>
+		</section>
 	</main>
+
+	<footer class="site-footer">
+		<div class="container footer__grid">
+			<div class="footer__brand">
+				<div class="brand">
+					<span class="brand__logo" aria-hidden="true">⛓️</span>
+					<span class="brand__text">ICON Fence</span>
+				</div>
+				<p>Professional residential and commercial fencing. Licensed and insured.</p>
+			</div>
+			<nav class="footer__nav" aria-label="Footer">
+				<ul>
+					<li><a href="#fencing">Fencing</a></li>
+					<li><a href="#gates">Gates</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#reviews">Reviews</a></li>
+					<li><a href="#quote">Get a Quote</a></li>
+				</ul>
+			</nav>
+			<div class="footer__contact">
+				<a href="tel:+15555551234">(555) 555-1234</a>
+				<a href="mailto:hello@example.com">hello@example.com</a>
+				<address>123 Fence Ave, Springfield, ST 00000</address>
+			</div>
+		</div>
+		<div class="container footer__bottom">
+			<p>© <span id="year"></span> ICON Fence. All rights reserved.</p>
+		</div>
+	</footer>
+
 	<script src="script.js"></script>
 </body>
 </html> 
