@@ -17,6 +17,14 @@
       "dest": "/dashboard.html"
     },
     {
+      "src": "/test",
+      "dest": "/test-demo.html"
+    },
+    {
+      "src": "/demo",
+      "dest": "/test-demo.html"
+    },
+    {
       "src": "/",
       "dest": "/index.html"
     }
