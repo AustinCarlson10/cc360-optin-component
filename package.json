@@ -1,0 +1,43 @@
+{
+  "name": "aws-lambda-error-auto-fixer",
+  "version": "1.0.0",
+  "description": "Automated Lambda error detection and fixing system using AWS MCP servers",
+  "main": "lambda-error-orchestrator.js",
+  "scripts": {
+    "start": "node lambda-error-orchestrator.js",
+    "test": "node test-orchestrator.js",
+    "deploy": "zip -r lambda-error-fixer.zip *.js package.json",
+    "local-test": "node -e \"require('./lambda-error-orchestrator').handler({}, {})\""
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "error-monitoring",
+    "auto-fix",
+    "cloudwatch",
+    "mcp",
+    "devops",
+    "automation"
+  ],
+  "author": "AWS Lambda Auto-Fixer",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.450.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.450.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/aws-lambda-error-auto-fixer"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/aws-lambda-error-auto-fixer/issues"
+  },
+  "homepage": "https://github.com/your-org/aws-lambda-error-auto-fixer#readme"
+}

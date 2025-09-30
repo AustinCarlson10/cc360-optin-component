@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "aws-knowledge-mcp-server": {
+      "url": "https://knowledge-mcp.global.api.aws"
+    },
+    "aws-cloudwatch-mcp-server": {
+      "url": "https://cloudwatch-mcp.global.api.aws"
+    },
+    "aws-lambda-mcp-server": {
+      "url": "https://lambda-mcp.global.api.aws"
+    }
+  }
+}
